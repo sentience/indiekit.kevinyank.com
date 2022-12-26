@@ -1,0 +1,20 @@
+{
+  "plugins": [
+    "@indiekit/preset-jekyll",
+    "@indiekit/store-github",
+    "@indiekit/syndicator-mastodon"
+  ],
+  "publication": {
+    "me": "https://kevinyank.com"
+  },
+  "@indiekit/preset-jekyll": {},
+  "@indiekit/store-github": {
+    "user": "sentience",
+    "repo": "kevinyank.com",
+    "branch": "main"
+  },
+  "@indiekit/syndicator-mastodon": {
+    "url": "https://hachyderm.io",
+    "user": "sentience"
+  }
+}
