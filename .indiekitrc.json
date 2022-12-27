@@ -1,4 +1,7 @@
 {
+  "application": {
+    "mongodbUrl": "mongodb://indiekit:replaceme@mongo/indiekit"
+  },
   "plugins": [
     "@indiekit/preset-jekyll",
     "@indiekit/store-github",
