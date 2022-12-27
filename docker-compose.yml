@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  indiekit:
+    container_name: indiekit-app
+    image: kyank/indiekit
+    restart: always
+    build: .
+    ports:
+      - "8080:8080"
+    links:
+      - mongo
+    environment:
+      - MONGO_URL=mongodb://indiekit:replaceme@mongo/indiekit
+      - PASSWORD_SECRET=replaceme
+      - SECRET=replaceme
+      - GITHUB_TOKEN=replaceme
+      - MASTODON_ACCESS_TOKEN=replaceme
+  mongo:
+    container_name: indiekit-mongo
+    image: mongo:6
+    restart: always
+    volumes:
+      - ./data:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    ports:
+      - "27018:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=indiekit
+      - MONGO_INITDB_ROOT_PASSWORD=replaceme
+      - MONGO_INITDB_DATABASE=indiekit
