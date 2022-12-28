@@ -6,15 +6,15 @@ services:
     restart: always
     build: .
     ports:
-      - "8080:8080"
+      - "${HTTP_PORT:-3000}:3000"
     links:
       - mongo
     environment:
-      - MONGO_URL=mongodb://indiekit:replaceme@mongo
-      - PASSWORD_SECRET=replaceme
-      - SECRET=replaceme
-      - GITHUB_TOKEN=replaceme
-      - MASTODON_ACCESS_TOKEN=replaceme
+      - MONGO_URL=mongodb://$MONGO_INITDB_ROOT_USERNAME:$MONGO_INITDB_ROOT_PASSWORD@mongo
+      - PASSWORD_SECRET
+      - SECRET
+      - GITHUB_TOKEN
+      - MASTODON_ACCESS_TOKEN
   mongo:
     container_name: indiekit-mongo
     image: mongo:4 # 5+ requires AVX instruction set not supported on Synology 1019+
@@ -24,8 +24,8 @@ services:
     ports:
       - "27018:27017"
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=indiekit
-      - MONGO_INITDB_ROOT_PASSWORD=replaceme
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
 
 volumes:
   indiekit-mongo-data:
