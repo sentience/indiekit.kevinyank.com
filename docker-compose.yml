@@ -17,14 +17,16 @@ services:
       - MASTODON_ACCESS_TOKEN=replaceme
   mongo:
     container_name: indiekit-mongo
-    image: mongo:6
+    image: mongo:4 # 5+ requires AVX instruction set not supported on Synology 1019+
     restart: always
     volumes:
-      - ./data:/data/db
-      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - indiekit-mongo-data:/data/db
     ports:
       - "27018:27017"
     environment:
       - MONGO_INITDB_ROOT_USERNAME=indiekit
       - MONGO_INITDB_ROOT_PASSWORD=replaceme
-      - MONGO_INITDB_DATABASE=indiekit
+
+volumes:
+  indiekit-mongo-data:
+    external: true
