@@ -10,7 +10,7 @@ services:
     links:
       - mongo
     environment:
-      - MONGO_URL=mongodb://indiekit:replaceme@mongo/indiekit
+      - MONGO_URL=mongodb://indiekit:replaceme@mongo
       - PASSWORD_SECRET=replaceme
       - SECRET=replaceme
       - GITHUB_TOKEN=replaceme

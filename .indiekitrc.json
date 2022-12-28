@@ -1,6 +1,6 @@
 {
   "application": {
-    "mongodbUrl": "mongodb://indiekit:replaceme@mongo/indiekit"
+    "mongodbUrl": "mongodb://indiekit:replaceme@mongo"
   },
   "plugins": [
     "@indiekit/preset-jekyll",
