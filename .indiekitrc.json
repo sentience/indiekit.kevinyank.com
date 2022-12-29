@@ -8,7 +8,28 @@
     "@indiekit/syndicator-mastodon"
   ],
   "publication": {
-    "me": "https://kevinyank.com"
+    "me": "https://kevinyank.com",
+    "postTypes": [
+      {
+        "type": "article",
+        "name": "Article",
+        "post": {
+          "path": "_posts/{yyyy}-{MM}-{dd}-{slug}.md",
+          "url": "posts/{slug}/"
+        },
+        "media": {
+          "path": "media/{yyyy}/{MM}/{dd}/{filename}"
+        }
+      },
+      {
+        "type": "note",
+        "name": "Note",
+        "post": {
+          "path": "_notes/{yyyy}-{MM}-{dd}-{slug}.md",
+          "url": "notes/{slug}/"
+        }
+      }
+    ]
   },
   "@indiekit/preset-jekyll": {},
   "@indiekit/store-github": {
