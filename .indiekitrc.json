@@ -39,6 +39,8 @@
   },
   "@indiekit/syndicator-mastodon": {
     "url": "https://hachyderm.io",
-    "user": "sentience"
+    "user": "sentience",
+    "checked": true,
+    "forced": false
   }
 }
