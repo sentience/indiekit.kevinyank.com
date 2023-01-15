@@ -12,6 +12,7 @@ services:
     environment:
       - MONGO_URL=mongodb://$MONGO_INITDB_ROOT_USERNAME:$MONGO_INITDB_ROOT_PASSWORD@mongo
       - PASSWORD_SECRET
+      - WEBHOOK_SECRET
       - SECRET
       - GITHUB_TOKEN
       - MASTODON_ACCESS_TOKEN
