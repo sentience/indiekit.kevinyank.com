@@ -17,7 +17,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@indiekit/indiekit": "sentience/indiekit",
+    "@indiekit/indiekit": "https://gitpkg.now.sh/getindiekit/indiekit/packages/indiekit?main",
     "@indiekit/preset-jekyll": "^1.0.0-beta.4",
     "@indiekit/store-github": "^1.0.0-beta.5",
     "@indiekit/syndicator-mastodon": "^1.0.0-beta.5"
