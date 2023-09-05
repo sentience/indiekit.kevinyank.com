@@ -16,8 +16,11 @@
     "node": "18"
   },
   "type": "module",
+  "//": "Temporarily depending directly on error and frontend packages to upgrade them past current release. Remove these dependencies when you revert indiekit to an official release",
   "dependencies": {
     "@indiekit/indiekit": "https://gitpkg.now.sh/getindiekit/indiekit/packages/indiekit?main",
+    "@indiekit/error": "https://gitpkg.now.sh/getindiekit/indiekit/packages/error?main",
+    "@indiekit/frontend": "https://gitpkg.now.sh/getindiekit/indiekit/packages/frontend?main",
     "@indiekit/preset-jekyll": "^1.0.0-beta.4",
     "@indiekit/store-github": "^1.0.0-beta.5",
     "@indiekit/syndicator-mastodon": "^1.0.0-beta.5"
