@@ -9,9 +9,8 @@
   ],
   "publication": {
     "me": "https://kevinyank.com",
-    "postTypes": [
-      {
-        "type": "article",
+    "postTypes": {
+      "article": {
         "name": "Article",
         "post": {
           "path": "_posts/{yyyy}-{MM}-{dd}-{slug}.md",
@@ -21,16 +20,14 @@
           "path": "media/{yyyy}/{MM}/{dd}/{filename}"
         }
       },
-      {
-        "type": "note",
+      "note": {
         "name": "Note",
         "post": {
           "path": "_notes/{yyyy}-{MM}-{dd}-{slug}.md",
           "url": "notes/{slug}/"
         }
       },
-      {
-        "type": "photo",
+      "photo": {
         "name": "Photo",
         "post": {
           "path": "_photos/{yyyy}-{MM}-{dd}-{slug}.md",
@@ -40,7 +37,7 @@
           "path": "assets/images/blog/{filename}"
         }
       }
-    ]
+    }
   },
   "@indiekit/preset-jekyll": {},
   "@indiekit/store-github": {

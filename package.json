@@ -13,23 +13,14 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "18"
+    "node": ">=20"
   },
   "type": "module",
-  "//": "Temporarily depending directly on several packages to upgrade them past current release. Remove these dependencies when you revert indiekit to an official release",
+  "private": true,
   "dependencies": {
-    "@indiekit/indiekit": "https://gitpkg.now.sh/getindiekit/indiekit/packages/indiekit?main",
-    "@indiekit/endpoint-auth": "https://gitpkg.now.sh/getindiekit/indiekit/packages/endpoint-auth?main",
-    "@indiekit/endpoint-files": "https://gitpkg.now.sh/getindiekit/indiekit/packages/endpoint-files?main",
-    "@indiekit/endpoint-media": "https://gitpkg.now.sh/getindiekit/indiekit/packages/endpoint-media?main",
-    "@indiekit/endpoint-micropub": "https://gitpkg.now.sh/getindiekit/indiekit/packages/endpoint-micropub?main",
-    "@indiekit/endpoint-posts": "https://gitpkg.now.sh/getindiekit/indiekit/packages/endpoint-posts?main",
-    "@indiekit/endpoint-share": "https://gitpkg.now.sh/getindiekit/indiekit/packages/endpoint-share?main",
-    "@indiekit/error": "https://gitpkg.now.sh/getindiekit/indiekit/packages/error?main",
-    "@indiekit/frontend": "https://gitpkg.now.sh/getindiekit/indiekit/packages/frontend?main",
-    "@indiekit/util": "https://gitpkg.now.sh/getindiekit/indiekit/packages/util?main",
-    "@indiekit/preset-jekyll": "^1.0.0-beta.4",
-    "@indiekit/store-github": "^1.0.0-beta.5",
-    "@indiekit/syndicator-mastodon": "^1.0.0-beta.5"
+    "@indiekit/indiekit": "^1.0.0-beta",
+    "@indiekit/preset-jekyll": "^1.0.0-beta",
+    "@indiekit/store-github": "^1.0.0-beta",
+    "@indiekit/syndicator-mastodon": "^1.0.0-beta"
   }
 }
