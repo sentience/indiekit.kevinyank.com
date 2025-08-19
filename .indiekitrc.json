@@ -5,6 +5,7 @@
   "plugins": [
     "@indiekit/preset-jekyll",
     "@indiekit/store-github",
+    "@indiekit/syndicator-bluesky",
     "@indiekit/syndicator-mastodon"
   ],
   "publication": {
@@ -50,5 +51,9 @@
     "user": "sentience",
     "checked": true,
     "forced": false
+  },
+  "@indiekit/syndicator-bluesky": {
+    "handle": "kevinyank.com",
+    "checked": true
   }
 }

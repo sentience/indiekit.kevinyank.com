@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "type": "module",
   "private": true,
@@ -21,6 +21,7 @@
     "@indiekit/indiekit": "^1.0.0-beta",
     "@indiekit/preset-jekyll": "^1.0.0-beta",
     "@indiekit/store-github": "^1.0.0-beta",
+    "@indiekit/syndicator-bluesky": "^1.0.0-beta",
     "@indiekit/syndicator-mastodon": "^1.0.0-beta"
   }
 }

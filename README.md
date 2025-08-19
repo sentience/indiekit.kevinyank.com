@@ -9,4 +9,4 @@ Learn more at <https://getindiekit.com>
 1. Update the version ranges in **package.json** if required.
 2. Run `npm update` to upgrade to latest package versions allowed by **package.json**.
 3. Run `docker build -t kyank/indiekit .`.
-4. Update the running container to **kyank/indiekit:latest**.
+4. Update the running container to **kyank/indiekit:latest**: `docker compose up -d`.

@@ -16,6 +16,7 @@ services:
       - SECRET
       - GITHUB_TOKEN
       - MASTODON_ACCESS_TOKEN
+      - BLUESKY_PASSWORD
   mongo:
     container_name: indiekit-mongo
     image: mongo:4 # 5+ requires AVX instruction set not supported on Synology 1019+
